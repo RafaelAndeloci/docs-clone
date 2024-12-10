@@ -15,11 +15,13 @@ import {
   Undo2Icon,
 } from "lucide-react";
 
+import { AlignButton } from "@/components/editor/align-button";
 import { FontFamilyButton } from "@/components/editor/font-family-button";
 import { HeadingLevelButton } from "@/components/editor/heading-level-button";
 import { HighlightColorButton } from "@/components/editor/highlight-color-button";
 import { ImageButton } from "@/components/editor/image-button";
 import { LinkButton } from "@/components/editor/link-button";
+import { ListButton } from "@/components/editor/list-button";
 import { TextColorButton } from "@/components/editor/text-color-button";
 import {
   ToolbarButton,
@@ -118,9 +120,9 @@ export function Toolbar() {
       <HighlightColorButton />
       <LinkButton />
       <ImageButton />
-      {/* TODO: Align */}
+      <AlignButton />
       {/* TODO: Line height  */}
-      {/* TODO: List */}
+      <ListButton />
       {sections[2].map((item) => {
         return <ToolbarButton key={item.label} {...item} />;
       })}
