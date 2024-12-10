@@ -17,6 +17,8 @@ import {
 
 import { FontFamilyButton } from "@/components/editor/font-family-button";
 import { HeadingLevelButton } from "@/components/editor/heading-level-button";
+import { HighlightColorButton } from "@/components/editor/highlight-color-button";
+import { TextColorButton } from "@/components/editor/text-color-button";
 import {
   ToolbarButton,
   ToolbarButtonProps,
@@ -110,8 +112,8 @@ export function Toolbar() {
       {sections[1].map((item) => {
         return <ToolbarButton key={item.label} {...item} />;
       })}
-      {/* TODO: Text Color */}
-      {/* TODO: Highlight color  */}
+      <TextColorButton />
+      <HighlightColorButton />
       {/* TODO: Link  */}
       {/* TODO: Image  */}
       {/* TODO: Align */}

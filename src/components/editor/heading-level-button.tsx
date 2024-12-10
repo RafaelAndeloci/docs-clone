@@ -55,6 +55,7 @@ export function HeadingLevelButton() {
           const isActive =
             (value === 0 && !editor?.isActive("heading")) ||
             editor?.isActive("heading", { level: value });
+
           return (
             <button
               onClick={() => changeHeading(value)}
