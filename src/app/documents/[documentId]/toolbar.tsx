@@ -1,19 +1,11 @@
 "use client";
 
 import { Separator } from "@/components/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 import {
   BoldIcon,
   ItalicIcon,
   ListTodoIcon,
-  LucideIcon,
   MessageSquarePlusIcon,
   PrinterIcon,
   Redo2Icon,
@@ -23,38 +15,12 @@ import {
   Undo2Icon,
 } from "lucide-react";
 
-interface ToolbarButtonProps {
-  onClick?: () => void;
-  isActive?: boolean;
-  icon: LucideIcon;
-  label?: string;
-}
-
-function ToolbarButton({
-  icon: Icon,
-  isActive,
-  onClick,
-  label,
-}: ToolbarButtonProps) {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <button
-            onClick={onClick}
-            className={cn(
-              "text-sm size-7 min-h-7 flex items-center justify-center rounded-sm hover:bg-neutral-200/80",
-              isActive && "bg-neutral-200/80"
-            )}
-          >
-            <Icon />
-          </button>
-        </TooltipTrigger>
-        <TooltipContent>{label}</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
-}
+import { FontFamilyButton } from "@/components/editor/font-family-button";
+import { HeadingLevelButton } from "@/components/editor/heading-level-button";
+import {
+  ToolbarButton,
+  ToolbarButtonProps,
+} from "@/components/editor/tool-button";
 
 export function Toolbar() {
   const { editor } = useEditorStore();
@@ -135,9 +101,9 @@ export function Toolbar() {
         return <ToolbarButton key={item.label} {...item} />;
       })}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
-      {/* TODO: Font family */}
+      <FontFamilyButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
-      {/* TODO: Heading */}
+      <HeadingLevelButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Font Size */}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />

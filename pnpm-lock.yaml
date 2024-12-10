@@ -92,6 +92,12 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.1.4
         version: 1.1.4(@types/react-dom@18.3.3(@types/react@18.3.14))(@types/react@18.3.14)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      '@tiptap/extension-font-family':
+        specifier: 2.10.2
+        version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/extension-text-style@2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2)))
+      '@tiptap/extension-heading':
+        specifier: 2.10.2
+        version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/extension-image':
         specifier: 2.10.2
         version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
@@ -111,6 +117,9 @@ importers:
         specifier: 2.10.2
         version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)
       '@tiptap/extension-task-list':
+        specifier: 2.10.2
+        version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
+      '@tiptap/extension-text-style':
         specifier: 2.10.2
         version: 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/extension-underline':
@@ -1332,6 +1341,12 @@ packages:
       '@tiptap/core': ^2.7.0
       '@tiptap/pm': ^2.7.0
 
+  '@tiptap/extension-font-family@2.10.2':
+    resolution: {integrity: sha512-0O3aBLgJ7QNkqFm3Ca+QnMnF3FEzvtFXICxRYXOSawjW8bYJLpA5/bl4q9cbLYOfNGU2BncFb0OjDDvye5UGVQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/extension-text-style': ^2.7.0
+
   '@tiptap/extension-gapcursor@2.10.3':
     resolution: {integrity: sha512-FskZi2DqDSTH1WkgLF2OLy0xU7qj3AgHsKhVsryeAtld4jAK5EsonneWgaipbz0e/MxuIvc1oyacfZKABpLaNg==}
     peerDependencies:
@@ -1343,8 +1358,8 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.7.0
 
-  '@tiptap/extension-heading@2.10.3':
-    resolution: {integrity: sha512-AlxXXPCWIvw8hQUDFRskasj32iMNB8Sb19VgyFWqwvntGs2/UffNu8VdsVqxD2HpZ0g5rLYCYtSW4wigs9R3og==}
+  '@tiptap/extension-heading@2.10.2':
+    resolution: {integrity: sha512-OfvE+epZSyB0TbV5/4GdvRPMT1kd0fbgLUEaldWMZOLw/4eOGWZ8yXAtrWkoRMLZfOclgnDfwXvXJLnWXrDdDw==}
     peerDependencies:
       '@tiptap/core': ^2.7.0
 
@@ -1422,8 +1437,8 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.7.0
 
-  '@tiptap/extension-text-style@2.10.3':
-    resolution: {integrity: sha512-TalYIdlF7vBA4afFhmido7AORdBbu3sV+HCByda0FiNbM6cjng3Nr9oxHOCVJy+ChqrcgF4m54zDfLmamdyu5Q==}
+  '@tiptap/extension-text-style@2.10.2':
+    resolution: {integrity: sha512-dWx5Ean7Rb6rdqO6C/i0qIIABKHFsABZj0mTDr0/ZXsw3V2O4d1cP13evvcc7HMLNAXziRTtWCVU6M06vwM/Pw==}
     peerDependencies:
       '@tiptap/core': ^2.7.0
 
@@ -4312,6 +4327,11 @@ snapshots:
       '@tiptap/pm': 2.10.2
       tippy.js: 6.3.7
 
+  '@tiptap/extension-font-family@2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/extension-text-style@2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2)))':
+    dependencies:
+      '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
+      '@tiptap/extension-text-style': 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
+
   '@tiptap/extension-gapcursor@2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)':
     dependencies:
       '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
@@ -4321,7 +4341,7 @@ snapshots:
     dependencies:
       '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
 
-  '@tiptap/extension-heading@2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))':
+  '@tiptap/extension-heading@2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))':
     dependencies:
       '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
 
@@ -4385,7 +4405,7 @@ snapshots:
     dependencies:
       '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
 
-  '@tiptap/extension-text-style@2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))':
+  '@tiptap/extension-text-style@2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))':
     dependencies:
       '@tiptap/core': 2.10.3(@tiptap/pm@2.10.2)
 
@@ -4442,7 +4462,7 @@ snapshots:
       '@tiptap/extension-dropcursor': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)
       '@tiptap/extension-gapcursor': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)
       '@tiptap/extension-hard-break': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
-      '@tiptap/extension-heading': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
+      '@tiptap/extension-heading': 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/extension-history': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)
       '@tiptap/extension-horizontal-rule': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))(@tiptap/pm@2.10.2)
       '@tiptap/extension-italic': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
@@ -4451,7 +4471,7 @@ snapshots:
       '@tiptap/extension-paragraph': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/extension-strike': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/extension-text': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
-      '@tiptap/extension-text-style': 2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
+      '@tiptap/extension-text-style': 2.10.2(@tiptap/core@2.10.3(@tiptap/pm@2.10.2))
       '@tiptap/pm': 2.10.2
 
   '@types/d3-array@3.2.1': {}
